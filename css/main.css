@@ -120,6 +120,47 @@ h1, h2, h3, h4, p {
     background-image: url('./../img/icons/account.svg');
 }
 
+.nav-button {
+    display: none;
+    height: 30px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+}
+
+.nav-button-icon {
+    position: relative;
+    display: block;
+    background-color: #fff;
+    border: none;
+    width: 42px;
+    height: 5px;    
+}
+
+.nav-button-icon::before {
+    position: absolute;
+    left: 0;
+    top: -12px;
+    content: "";
+    display: block;
+    width: 42px;
+    height: 5px;
+    background-color: #fff;
+}
+
+.nav-button-icon::after {
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    content: "";
+    display: block;
+    width: 42px;
+    height: 5px;
+    background-color: #fff;
+}
+
+
 
 /* HERO */
 
@@ -145,7 +186,7 @@ h1, h2, h3, h4, p {
     padding-left: 104px;
     font-weight: 800;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.222;
     letter-spacing: 6px;
     text-transform: uppercase;
     color: #FBD784;
@@ -182,12 +223,13 @@ h1, h2, h3, h4, p {
     font-weight: 700;
     font-size: 18px;
     line-height: 1.222;
+    text-decoration: none;
     color: white;
 }
 
 .hero-scroll::after {
     display: block;
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     top: 50%;
@@ -288,6 +330,7 @@ h1, h2, h3, h4, p {
     font-size: 18px;
     line-height: 1.222;
     color: #FBD784;
+    text-decoration: none;
 }
 
 .article-read-more::after {
