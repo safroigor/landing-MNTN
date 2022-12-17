@@ -121,12 +121,19 @@ h1, h2, h3, h4, p {
 }
 
 .nav-button {
+    position: relative;
+    z-index: 9;
     display: none;
     height: 30px;
     border: none;
     padding: 0;
     cursor: pointer;
     background: none;
+}
+
+.nav-button:focus,
+.nav-button:active {
+    outline: none;
 }
 
 .nav-button-icon {
@@ -160,7 +167,48 @@ h1, h2, h3, h4, p {
     background-color: #fff;
 }
 
+.nav-button-close .nav-button-icon {
+    background-color: transparent;
 
+}
+
+.nav-button-close .nav-button-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-button-close .nav-button-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.mobile-nav {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    padding: 70px 70px 50px 30px;
+    background-color: rgba(11, 29, 38, 0.8)
+}
+
+.mobile-nav .nav,
+.mobile-nav .account {
+    display: block;
+}
+
+.mobile-nav .nav ul {
+    flex-direction: column;
+}
+
+.mobile-nav .nav li {
+    margin: 0;
+    margin-bottom: 25px;
+}
 
 /* HERO */
 

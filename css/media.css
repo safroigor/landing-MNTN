@@ -13,4 +13,8 @@
     .nav-button {
         display: block;
     }
+
+    .mobile-nav-active {
+        display: flex;
+    }
 }
