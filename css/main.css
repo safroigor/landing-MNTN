@@ -30,6 +30,15 @@ h1, h2, h3, h4, p {
     margin: 0;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
 /* Header */
 
 .header {
@@ -188,6 +197,7 @@ h1, h2, h3, h4, p {
     flex-direction: column;
     justify-content: space-between;
     position:fixed;
+    z-index: 8;
     top: 0;
     right: 0;
     width: 320px;
@@ -262,6 +272,7 @@ h1, h2, h3, h4, p {
     line-height: 1.136;  
     text-transform: capitalize;    
     color: #FFFFFF;
+    text-shadow: 0px 0px 15px rgba(0,0,0,0.6);
 }
 
 .hero-scroll {
@@ -298,6 +309,7 @@ h1, h2, h3, h4, p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 50px;
 }
 
 .article:nth-child(even) {
@@ -307,7 +319,7 @@ h1, h2, h3, h4, p {
 .article-text {
     position: relative;
     padding-left: 150px;
-    max-width: 782px;
+    max-width: 700px;
 }
 
 .article-text::before {
@@ -328,8 +340,8 @@ h1, h2, h3, h4, p {
 }
 
 .article-subtitle {
-    margin-bottom: 32px;
     position: relative;
+    margin-bottom: 32px;
     padding-left: 96px;
     font-weight: 800;
     font-size: 18px;
@@ -353,7 +365,7 @@ h1, h2, h3, h4, p {
 
 .article-title {
     margin-bottom: 27px;
-    width: 555px;
+    max-width: 555px;
     font-family: 'Chronicle Display';
     font-style: normal;
     font-weight: 500;
@@ -393,9 +405,7 @@ h1, h2, h3, h4, p {
     background-image: url('./../img/icons/arrow-right.svg');
 }
 
-.article-image {
-    display: block;
-}
+
 
 /* FOOTER */
 
@@ -405,6 +415,7 @@ h1, h2, h3, h4, p {
 
 .row-footer {
     display: flex;
+    justify-content: space-between;
 }
 
 .footer-copyright {
